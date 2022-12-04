@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>scheme & margin Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+</head>
+<body>
+    <button type="button" class="scheme-calc">Scheme calculator</button>
+    <button type="button" class="margin-calc">Margin calculator</button>
+
+   <div class="container scheme-container">
+    <form action="" class="form scheme-form">
+        <div class="close-btn"><i class="fa-solid fa-x scheme-cancel"></i></div>
+        <div class="quantity">
+            <label for="quantity">Quantity</label id="quantity"><input type="number">
+        </div>
+        <div class="free">
+            <label for="free">Free</label><input id="free" type="number">
+        </div>
+        <div class="scheme-calculation calculation">
+            <h4 class="heading">Scheme Calculation:</h4>
+            <p class="scheme-text">100</p>
+        </div>
+        <div class="buttons">
+            <input type="button" value="Submit" class="scheme-submit">
+            <input type="reset" class="scheme-reset">
+        </div>
+    </form>
+   </div>
+
+   <div class="container margin-container">
+    <form action="" class=" form margin-form">
+        <div class="close-btn"><i class="fa-solid fa-x margin-cancel"></i></div>
+        <div class="p-mrp">
+            <label for="p-mrp">Product MRP</label><input id="p-mrp" type="number">
+        </div>
+        <div class="p-rate">
+            <label for="p-rate">Product rate</label><input id="p-rate" type="number">
+        </div>
+        <div class="scheme-rate">
+            <label for="scheme-rate">scheme rate %</label><input id="scheme-rate" type="number">
+        </div>
+        <div class="cd">
+            <label for="cd">Cash discount</label><input id="cd" type="number">
+        </div>
+        <div class="td">
+            <label for="td">Trade discount</label><input id="td" type="number">
+        </div>
+        <div class="gst">
+            <label for="gst">GST</label><input id="gst" type="number">
+        </div>
+        <div class="calculation margin-calculation">
+            <div class="cost">
+                <h4 class="heading">Cost: <span class="cost-text"></span></h4>
+            </div>
+            <div class="marginClc">
+                <h4 class="heading">Margin : <span class="margin-text"></span></h4>
+            </div>
+        </div>
+        <div class="buttons">
+            <input type="button" value="Submit" class="margin-submit">
+            <input type="reset" class="margin-reset">
+        </div>
+    </form>
+   </div>
+    <script src="script.js"></script>
+</body>
+</html>

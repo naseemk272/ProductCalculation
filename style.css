@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    font-family:'Poppins',sans-serif;
+}
+body{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    box-sizing:border-box;
+}
+button{
+    height:40px;
+    margin-top:20px;
+    margin-right:20px;
+    width:250px;
+    background:blue;
+    color:white;
+    font-size:16px;
+    border-radius:5px;
+    border:none;
+    cursor:pointer;
+    padding:5px 10px;
+    transition:all 0.3s ease;
+}
+button:hover{
+    background:darkblue;
+}
+.container{
+    min-height:100vh;
+    width:100%;
+    position:absolute;
+    top:0;
+    left:0;
+    background:#f0f0f0;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+.scheme-container ,.margin-container{
+    display:none;
+}
+.scheme-container.active , .margin-container.active{
+    display:flex;
+}
+.form{
+    width:500px;
+    margin:10px auto;
+    display:flex;
+    flex-direction:column;
+    box-sizing:border-box;
+    padding:10px;
+    border-radius:5px;
+    row-gap:20px;
+    animation:animate 0.3s linear;
+    position:relative;
+    background:white;
+    box-shadow:0 4px 5px rgba(0,0,0,0.5);
+}
+@keyframes animate{
+    0%{
+        scale:0.5;
+    }
+    100%{
+        scale:1;
+    }
+}
+.close-btn{
+    position:absolute;
+    right:20px;
+    top:10px;
+    cursor:pointer;
+    font-size:22px;
+    transition:all 0.3s ease;
+}
+.close-btn:hover{
+    color:crimson;
+}
+input{
+    box-sizing:border-box;
+    padding-inline:10px;
+    border-radius:2px;
+    border:1px solid grey;
+    outline:None;
+}
+.form div:not(.buttons){
+    display:grid;
+    grid-template-columns:1fr;
+    grid-template-rows:repeat(2,35px);
+    text-transform:uppercase;
+}
+.form div.buttons{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:15px;
+    grid-template-rows:35px;
+}
+input[type=button],input[type=reset]{
+    cursor:pointer;
+    background:blue;
+    color:white;
+    border:none;
+    outline:none;
+    transition:all 0.3s ease;
+}
+input[type=button]:hover ,input[type=reset]:hover{
+    background:darkblue;
+}
+form .calculation{
+    max-height:0;
+    overflow:hidden;
+    transition:all 0.3s ease;
+}
+form .calculation.active{
+    max-height:fit-content;
+    overflow:auto;
+}
+form .calculation .heading{
+    font-size:18px;
+    font-weight:500;
+    text-align:center;
+}
+form .calculation p{
+    text-align:center;
+    font-size:18px;
+}
+/* responsive designs */
+@media screen and (min-width:1000px){
+    .form{
+        width:700px;
+    }
+}
+@media screen and (min-width:550px){
+    .form{
+        width:500px;
+    }
+}
+@media screen and (max-width:550px){
+    .form{
+        width:95%;
+    }
+    body{
+        flex-direction:column;
+    }
+}
